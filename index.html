@@ -3,10 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display PDF</title>
+    <title>Fullscreen PDF Display</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        object {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <object data="olympic.pdf" width="1000" height="1000" type="application/pdf">
+    <object data="myfile.pdf" type="application/pdf">
+        <p>Your browser does not support PDFs. Download the PDF to view it: <a href="myfile.pdf">Download PDF</a>.</p>
+    </object>
+</body>
+</html>
+
+2. Explanation
+
+    html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; }: Ensures that the body and HTML take up the entire viewport with no scrolling or margins.
+    object { width: 100%; height: 100%; border: none; }: Makes the PDF object take up the full width and height of the viewport, effectively making it fullscreen.
+
+3. Push the Changes to GitHub
+
+After updating your HTML file, follow the same steps as before to commit and push your changes to GitHub:
+
+bash
+
+git add .
+git commit -m "Made PDF display fullscreen"
+git push origin main
+
+4. View the Updated Page
+
+Once the changes are deployed, visit your GitHub Pages site. The PDF should now be displayed in fullscreen, taking up the entire browser window.
+Example
+
+If your GitHub Pages URL is:
+
+arduino
+
+https://yourusername.github.io/yourrepositoryname/
+
+Navigate to that URL, and your PDF will display fullscreen.
+You said:
+just send the html code
+
+the file is olympic.pdf
+ChatGPT said:
+ChatGPT
+
+Here is the HTML code that will display olympic.pdf fullscreen:
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen PDF Display</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        object {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <object data="olympic.pdf" type="application/pdf">
         <p>Your browser does not support PDFs. Download the PDF to view it: <a href="olympic.pdf">Download PDF</a>.</p>
     </object>
 </body>
